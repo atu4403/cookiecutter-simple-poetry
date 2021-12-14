@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "{{cookiecutter.project_slug}}"
+version = "0.1.0"
+description = ""
+authors = ["{{ cookiecutter.github_username }}  <{{cookiecutter.email}}>"]
+homepage = "https://github.com/{{ cookiecutter.github_username }}"
+repository = "https://github.com/{{ cookiecutter.github_username }}/{{cookiecutter.project_slug}}"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 99
+exclude = '''
+(
+    migrations
+    | .mypy_cache
+    | .pytest_cache
+    | .tox
+    | venv
+)
+'''
+
+[flake8]
+max-line-length = 99
