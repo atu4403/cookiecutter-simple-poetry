@@ -65,3 +65,4 @@ target/
 .idea
 memo.md
 test.md
+.DS_Store
